@@ -1,0 +1,29 @@
+Modify Google Contacts is a simple python script to modify Mobile Numbers in
+your Google contacts (for Egyptian Mobile Numbers after migrating from 10 to
+11 digits).
+
+To use this script:
+1) Export your Google contacts in a csv file format
+2) Run the python script in terminal by passing the csv file to the arguments
+  - You may not pass the input file to the script in case of naming the file 
+    'google.csv' and it is located in the same directory of the script
+  - Also you can pass as a second argument the output file name
+3) Check the generated file
+4) Removed all of your contacts from Google contacts
+5) Import the output csv file to your Google contacts
+6) Congratulations! you are now done.
+
+Example:
+  python modify_contacts.py <input file path> <output file path>
+  ** Input my_contacts.csv and output is my_new_contacts.csv **
+
+  python modify_contacts.py
+  ** Input: google.csv ... Output: new_contacts.csv **
+
+Note: 
+1) It is preferred not to delete the exported contacts file before making sure
+   that everything is OK and contacts are modified correctly, as in any case
+   you can revert by deleting all contacts from your Google contacts and import
+   the original file.
+2) This script is tested and developed on nix environment, and running it on
+   Windows environment is not guaranteed.
