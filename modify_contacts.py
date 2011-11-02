@@ -18,6 +18,13 @@ def error(message):
 def modify(number):
     # modify function
     number = number.replace(' ', '')
+    prefix = ''
+    if number.startswith('+2'):
+        prefix = '+2'
+        number = number[2:]
+    elif number.startswith('002'):
+        prefix = '002'
+        number = number[3:]
     if len(number) > 10 and number[0:3] != '015':
         return number
     if number[0:3] == '012':
@@ -42,7 +49,7 @@ def modify(number):
         number = '0109' + number[3:]
     elif number[0:4] == '0151':
         number = '0101' + number[4:]
-    return number
+    return prefix + number
 
 def generate_new_contacts(contacts, modified):
     if not modified:
